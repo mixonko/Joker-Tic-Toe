@@ -4,5 +4,9 @@ import android.widget.ImageView
 
 interface GameContract {
     fun recreateActivity()
-    fun showImage(imageView: ImageView)
+    fun setImageFirstPlayer(imageView: ImageView)
+    fun setImageSecondPlayer(imageView: ImageView)
+    fun setDisabled(imageView: ImageView)
+    fun showWinner()
+    fun setAllDisabled()
 }
