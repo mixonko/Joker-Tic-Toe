@@ -10,4 +10,8 @@ class MenuPresenter(private val view : MenuActivity) {
     fun onSettingsClick() {
         view.startSettings()
     }
+
+    fun onWebViewClick() {
+        view.startWebViewActivity()
+    }
 }

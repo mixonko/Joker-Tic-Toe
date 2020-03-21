@@ -7,6 +7,9 @@ interface GameContract {
     fun setImageFirstPlayer(imageView: ImageView)
     fun setImageSecondPlayer(imageView: ImageView)
     fun setDisabled(imageView: ImageView)
-    fun showWinner()
+    fun showWinnerFirstPlayer()
+    fun showWinnerSecondPlayer()
+    fun showYouWin()
+    fun hideImageView()
     fun setAllDisabled()
 }

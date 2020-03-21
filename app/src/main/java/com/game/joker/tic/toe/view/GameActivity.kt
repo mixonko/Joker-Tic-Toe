@@ -22,6 +22,7 @@ class GameActivity : AppCompatActivity(), GameContract, View.OnClickListener {
     private lateinit var imageView31: ImageView
     private lateinit var imageView32: ImageView
     private lateinit var imageView33: ImageView
+    private lateinit var youWin: ImageView
     private lateinit var resetGame: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +59,7 @@ class GameActivity : AppCompatActivity(), GameContract, View.OnClickListener {
         imageView31 = findViewById(R.id.imageView31)
         imageView32 = findViewById(R.id.imageView32)
         imageView33 = findViewById(R.id.imageView33)
+        youWin = findViewById(R.id.you_win)
         resetGame = findViewById(R.id.resetGameButton)
     }
 
@@ -106,8 +108,31 @@ class GameActivity : AppCompatActivity(), GameContract, View.OnClickListener {
         imageView.isEnabled = false
     }
 
-    override fun showWinner() {
+    override fun showWinnerFirstPlayer() {
+        youWin.visibility = View.VISIBLE
+        imageView31.setImageResource(R.drawable.first_player)
+        imageView32.setImageResource(R.drawable.first_player)
+        imageView33.setImageResource(R.drawable.first_player)
+    }
 
+    override fun showWinnerSecondPlayer() {
+        imageView31.setImageResource(R.drawable.second_player)
+        imageView32.setImageResource(R.drawable.second_player)
+        imageView33.setImageResource(R.drawable.second_player)
+    }
+
+    override fun showYouWin() {
+        youWin.visibility = View.VISIBLE
+        imageView11
+    }
+
+    override fun hideImageView() {
+        imageView11.visibility = View.INVISIBLE
+        imageView12.visibility = View.INVISIBLE
+        imageView13.visibility = View.INVISIBLE
+        imageView21.visibility = View.INVISIBLE
+        imageView22.visibility = View.INVISIBLE
+        imageView23.visibility = View.INVISIBLE
     }
 
     override fun setAllDisabled() {
