@@ -30,9 +30,9 @@ class MenuActivity : AppCompatActivity(), MenuContract {
         play.setOnClickListener {
             presenter.onPlayClick()
         }
-        settings.setOnClickListener {
-            presenter.onSettingsClick()
-        }
+//        settings.setOnClickListener {
+//            presenter.onSettingsClick()
+//        }
         webView.setOnClickListener {
             presenter.onWebViewClick()
         }
@@ -40,7 +40,7 @@ class MenuActivity : AppCompatActivity(), MenuContract {
 
     fun init(){
         play = findViewById(R.id.playButton)
-        settings = findViewById(R.id.settingsButton)
+//        settings = findViewById(R.id.settingsButton)
         webView = findViewById(R.id.web_view_button)
     }
 

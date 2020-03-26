@@ -2,6 +2,7 @@ package com.game.joker.tic.toe.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import com.game.joker.tic.toe.contract.GameContract
 import com.game.joker.tic.toe.presenter.GamePresenter
 
 class GameActivity : AppCompatActivity(), GameContract, View.OnClickListener {
+
 
     private lateinit var presenter: GamePresenter
 
@@ -109,41 +111,44 @@ class GameActivity : AppCompatActivity(), GameContract, View.OnClickListener {
     }
 
     override fun showWinnerFirstPlayer() {
-        youWin.visibility = View.VISIBLE
-        imageView31.setImageResource(R.drawable.first_player)
-        imageView32.setImageResource(R.drawable.first_player)
-        imageView33.setImageResource(R.drawable.first_player)
+        Handler().postDelayed({
+            imageView31.setImageResource(R.drawable.first_player)
+            imageView32.setImageResource(R.drawable.first_player)
+            imageView33.setImageResource(R.drawable.first_player)
+        }, 500)
     }
 
     override fun showWinnerSecondPlayer() {
-        imageView31.setImageResource(R.drawable.second_player)
-        imageView32.setImageResource(R.drawable.second_player)
-        imageView33.setImageResource(R.drawable.second_player)
+        Handler().postDelayed({
+            imageView31.setImageResource(R.drawable.second_player)
+            imageView32.setImageResource(R.drawable.second_player)
+            imageView33.setImageResource(R.drawable.second_player)
+        }, 500)
     }
 
     override fun showYouWin() {
-        youWin.visibility = View.VISIBLE
-        imageView11
+        Handler().postDelayed({
+            youWin.visibility = View.VISIBLE
+            imageView11.visibility = View.INVISIBLE
+            imageView12.visibility = View.INVISIBLE
+            imageView13.visibility = View.INVISIBLE
+            imageView21.visibility = View.INVISIBLE
+            imageView22.visibility = View.INVISIBLE
+            imageView23.visibility = View.INVISIBLE
+        }, 500)
     }
-
-    override fun hideImageView() {
-        imageView11.visibility = View.INVISIBLE
-        imageView12.visibility = View.INVISIBLE
-        imageView13.visibility = View.INVISIBLE
-        imageView21.visibility = View.INVISIBLE
-        imageView22.visibility = View.INVISIBLE
-        imageView23.visibility = View.INVISIBLE
-    }
-
+ 
     override fun setAllDisabled() {
-        imageView11.isEnabled = false
-        imageView12.isEnabled = false
-        imageView13.isEnabled = false
-        imageView21.isEnabled = false
-        imageView22.isEnabled = false
-        imageView23.isEnabled = false
-        imageView31.isEnabled = false
-        imageView32.isEnabled = false
-        imageView33.isEnabled = false
+            imageView11.isEnabled = false
+            imageView12.isEnabled = false
+            imageView13.isEnabled = false
+            imageView21.isEnabled = false
+            imageView22.isEnabled = false
+            imageView23.isEnabled = false
+            imageView31.isEnabled = false
+            imageView32.isEnabled = false
+            imageView33.isEnabled = false
+
     }
+
 }

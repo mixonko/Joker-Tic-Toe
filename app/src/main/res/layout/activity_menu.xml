@@ -33,13 +33,13 @@
             android:layout_marginBottom="30dp"
             android:background="@drawable/play_image" />
 
-        <ImageView
-            android:id="@+id/settingsButton"
-            android:layout_width="194dp"
-            android:layout_height="73dp"
-            android:layout_marginBottom="50dp"
-            android:background="@drawable/setting"
-            android:elevation="4dp" />
+<!--        <ImageView-->
+<!--            android:id="@+id/settingsButton"-->
+<!--            android:layout_width="194dp"-->
+<!--            android:layout_height="73dp"-->
+<!--            android:layout_marginBottom="50dp"-->
+<!--            android:background="@drawable/setting"-->
+<!--            android:elevation="4dp" />-->
 
 <!--        <ImageView-->
 <!--            android:id="@+id/exitButton"-->

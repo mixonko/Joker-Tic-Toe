@@ -10,6 +10,5 @@ interface GameContract {
     fun showWinnerFirstPlayer()
     fun showWinnerSecondPlayer()
     fun showYouWin()
-    fun hideImageView()
     fun setAllDisabled()
 }

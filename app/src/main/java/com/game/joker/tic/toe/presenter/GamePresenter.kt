@@ -17,7 +17,6 @@ class GamePresenter(
     fun onImageClick(imageView: ImageView, tag: Int) {
         this.imageView = imageView
         updateArray(tag)
-        winnerCheck()
         if (side == 1) {
             side = 2
             view.setImageFirstPlayer(imageView)
@@ -26,6 +25,8 @@ class GamePresenter(
             view.setImageSecondPlayer(imageView)
         }
         view.setDisabled(imageView)
+        winnerCheck()
+
 
     }
 
@@ -52,11 +53,9 @@ class GamePresenter(
         if (winner != 0) {
             view.setAllDisabled()
             view.showYouWin()
-            view.hideImageView()
             if (winner == 1){
                 view.showWinnerFirstPlayer()
             }
-
             if (winner == 2){
                 view.showWinnerSecondPlayer()
             }
